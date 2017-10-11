@@ -23,9 +23,9 @@
 namespace Jcode\Data;
 
 use Jcode\Application;
-use Jcode\Object;
+use Jcode\DataObject;
 
-class Form extends Object
+class Form extends DataObject
 {
 
     protected $id;

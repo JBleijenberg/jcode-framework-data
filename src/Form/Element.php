@@ -23,7 +23,6 @@
 namespace Jcode\Data\Form;
 
 use Jcode\Layout\Resource\Template;
-use Jcode\Object;
 
 class Element extends Template
 {

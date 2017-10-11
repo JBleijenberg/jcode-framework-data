@@ -23,9 +23,9 @@
 namespace Jcode\Data\Form;
 
 use Jcode\Application;
-use Jcode\Object;
+use Jcode\DataObject;
 
-class Fieldset extends Object
+class Fieldset extends DataObject
 {
 
     protected $label;
