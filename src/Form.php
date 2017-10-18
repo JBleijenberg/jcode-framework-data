@@ -23,6 +23,7 @@
 namespace Jcode\Data;
 
 use Jcode\Application;
+use Jcode\Data\Form\Fieldset;
 use Jcode\DataObject;
 
 class Form extends DataObject
@@ -42,17 +43,14 @@ class Form extends DataObject
      * Instantiate a new fieldset and return it
      *
      * @param $name
-     * @param array $options
-     * @return object
-     * @throws \Exception
+     * @return Fieldset|object
+     * @internal param array $options
      */
-    public function addFieldset($name, array $options = [])
+    public function addFieldset($name) :Fieldset
     {
-        $fieldset = Application::objectManager()->get('Jcode\Data\Form\Fieldset', [$options]);
+        $this->fieldsets[$name] = Application::objectManager()->get('\Jcode\Data\Form\Fieldset');
 
-        $this->fieldsets[$name] = $fieldset;
-
-        return $fieldset;
+        return $this->fieldsets[$name];
     }
 
     /**
