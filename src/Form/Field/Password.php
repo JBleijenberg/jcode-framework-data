@@ -20,12 +20,12 @@
  * @copyright   Copyright (c) 2017 J!Code (http://www.jcode.nl)
  * @license     http://opensource.org/licenses/GPL-3.0 General Public License (GPL 3.0)
  */
-namespace Jcode\Data\Form\Element;
+namespace Jcode\Data\Form\Field;
 
-use Jcode\Data\Form\Element;
+use Jcode\Data\Form\Field;
 
-class Text extends Element
+class Password extends Field
 {
 
-    protected $template = 'Jmod_Cms::Form/Element/Text.phtml';
+    protected $template = 'Jcode_Data::Form/Field/Password.phtml';
 }

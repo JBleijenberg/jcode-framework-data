@@ -68,7 +68,7 @@ class Fieldset extends DataObject
     {
         $type = ucfirst($type);
 
-        $className = "Jcode\\Data\\Form\\Element\\{$type}";
+        $className = "Jcode\\Data\\Form\\Field\\{$type}";
 
         $instance = Application::objectManager()->get($className, [$options]);
 

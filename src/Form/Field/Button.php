@@ -20,12 +20,32 @@
  * @copyright   Copyright (c) 2017 J!Code (http://www.jcode.nl)
  * @license     http://opensource.org/licenses/GPL-3.0 General Public License (GPL 3.0)
  */
-namespace Jcode\Data\Form\Element;
+namespace Jcode\Data\Form\Field;
 
-use Jcode\Data\Form\Element;
+use Jcode\Data\Form\Field;
 
-class Password extends Element
+class Button extends Field
 {
 
-    protected $template = 'Jmod_Cms::Form/Element/Password.phtml';
+    protected $template = 'Jcode_Data::form/field/button.phtml';
+
+    protected $type = 'button';
+
+    protected $title;
+
+    /**
+     * @return string
+     */
+    public function getType() :string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle() :string
+    {
+        return $this->title;
+    }
 }

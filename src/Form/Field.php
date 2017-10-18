@@ -22,9 +22,9 @@
  */
 namespace Jcode\Data\Form;
 
-use Jcode\Layout\Resource\Template;
+use Jcode\Layout\Block\Template;
 
-class Element extends Template
+class Field extends Template
 {
 
     /**
@@ -95,6 +95,8 @@ class Element extends Template
     public function setId($id)
     {
         $this->id = $id;
+
+        ($this->name) ?: $this->name = $id;
     }
 
     /**
