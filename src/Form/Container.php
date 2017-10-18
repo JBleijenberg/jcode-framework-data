@@ -22,12 +22,13 @@
  */
 namespace Jcode\Data\Form;
 
-use \Jcode\Layout\Resource\Template;
+use Jcode\Data\Form;
+use \Jcode\Layout\Block\Template;
 
 class Container extends Template
 {
 
-    protected $template = 'Jmod_Cms::Form/Container.phtml';
+    protected $template = 'Jcode_Data::Form/Container.phtml';
 
     /**
      * @inject \Jcode\Data\Form
@@ -40,25 +41,21 @@ class Container extends Template
 
     }
 
-    public function getForm($id, array $options = [])
+    /**
+     * @return Form
+     * @internal param null $id
+     * @internal param array $options
+     */
+    public function getForm() :Form
     {
-        $form = $this->form;
-
-        $form->setId($id);
-
-        if (array_key_exists('method', $options)) {
-            $form->setMethod($options['method']);
-        }
-
-        if (array_key_exists('action', $options)) {
-            $form->setAction($options['action']);
-        }
-
-        if (array_key_exists('enctype', $options)) {
-            $form->setEncType($options['enctype']);
-        }
-
         return $this->form;
+    }
+
+    public function setForm(Form $form)
+    {
+        $this->form = $form;
+
+        return $this;
     }
 
     public function render()
