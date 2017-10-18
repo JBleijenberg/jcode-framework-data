@@ -1,0 +1,2 @@
+
+<input type="text" id="<?= $this->getId(); ?>" name="<?= $this->getName();?>" class="<?= $this->getClass();?>"<?php if ($this->getRequired()): ?><?= ' required'; ?><?php endif; ?><?php if ($this->getDisabled()): ?><?= ' disabled'; ?><?php endif; ?> autocomplete="<?= $this->getAutocomplete(); ?>">
