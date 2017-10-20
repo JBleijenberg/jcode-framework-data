@@ -56,6 +56,8 @@ class Field extends Template
      */
     protected $value;
 
+    protected $placeholder;
+
     protected $disabled = false;
 
     protected $required = false;
@@ -177,5 +179,15 @@ class Field extends Template
     public function setDisabled($disabled)
     {
         $this->disabled = $disabled;
+    }
+
+    public function getPlaceholder()
+    {
+        return $this->placeholder;
+    }
+
+    public function getRequired()
+    {
+        return $this->required;
     }
 }
