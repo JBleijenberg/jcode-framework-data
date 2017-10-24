@@ -33,8 +33,15 @@ class Select extends Field
 
     protected $options;
 
+    protected $multiple;
+
     public function getOptions()
     {
         return $this->options;
+    }
+
+    public function getMultiple()
+    {
+        return $this->multiple;
     }
 }
