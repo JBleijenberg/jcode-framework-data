@@ -58,6 +58,8 @@ class Field extends Template
 
     protected $placeholder;
 
+    protected $description;
+
     protected $disabled = false;
 
     protected $required = false;
@@ -189,5 +191,10 @@ class Field extends Template
     public function getRequired()
     {
         return $this->required;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
