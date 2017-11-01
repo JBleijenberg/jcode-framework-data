@@ -70,7 +70,7 @@ class Fieldset extends DataObject
 
         $className = "Jcode\\Data\\Form\\Field\\{$type}";
 
-        $instance = Application::objectManager()->get($className, [$options]);
+        $instance = Application::getClass($className, [$options]);
 
         if (is_a($instance, $className)) {
             $instance->setId($id);

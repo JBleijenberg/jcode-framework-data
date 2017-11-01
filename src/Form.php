@@ -48,7 +48,7 @@ class Form extends DataObject
      */
     public function addFieldset($name) :Fieldset
     {
-        $this->fieldsets[$name] = Application::objectManager()->get('\Jcode\Data\Form\Fieldset', [['label' => $name]]);
+        $this->fieldsets[$name] = Application::getClass('\Jcode\Data\Form\Fieldset', [['label' => $name]]);
 
         return $this->fieldsets[$name];
     }
