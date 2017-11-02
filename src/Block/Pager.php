@@ -170,7 +170,7 @@ class Pager extends Template
     {
         $controller = Application::registry('current_controller');
 
-        $currentPage = ($controller->getParam($this->getPageParameter()) !== false)
+        $currentPage = ($controller->getParam($this->getPageParameter()) !== null)
             ? $controller->getParam($this->getPageParameter())
             : 1;
 
